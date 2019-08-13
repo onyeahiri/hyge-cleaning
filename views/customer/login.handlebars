@@ -1,0 +1,50 @@
+<div class="w3-content w3-section">
+  <img class="mySlides w3-animate-fading" src="/img/bigstock-Young-smiling-cleaner-woman-I-29950436.jpg" style="width:60%">
+  <img class="mySlides w3-animate-fading" src="/img/clean.jpg" style="width:60%">
+  <img class="mySlides w3-animate-fading" src="/img/cleaner.png" style="width:60%">
+  <img class="mySlides w3-animate-fading" src="/img/10930259_l.jpg" style="width:60%">
+</div>
+
+<script>
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) { myIndex = 1 }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 9000);
+  }
+</script>
+
+
+
+<div class="bg-img">
+  <form action="/customer/login" class="container card" method="post">
+    <h5>Already A Member?</h5>
+    <br>
+    <br>
+    <label for="email">
+      <b>Email</b>
+    </label>
+    <input type="text" placeholder="Enter Email" name="emailAddress" required>
+
+    <label for="psw">
+      <b>Password</b>
+    </label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <button type="submit" class="btn">Login</button>
+    <br>
+    <br>
+    <br>
+    <h3>Not a Member?
+      <a href="/customer/signup" class="btn btn-warning">Signup</a>
+    </h3>
+  </form>
+</div>

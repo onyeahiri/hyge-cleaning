@@ -1,0 +1,27 @@
+ <div class="row body">
+          <div class="hero-image">     
+  
+<div class="prices">
+  <h3> Cleaning Prices</h3>
+  <br>
+  <p>Outstanding Cleaning Services: Reasonably Priced with No hidden fees and No surprises.</p>
+</div>
+<br>
+{{#if bookingServices}}
+<div class="row">
+{{#each bookingServices}}
+  <div class="col-sm-3 card text-center booking-box">
+      <h4>{{name}}</h4>
+      <p><i>{{amount}}</i></p>
+      <a href="/customer/make/payment/{{id}}/" class="btn btn-primary">Book Now</a>
+  </div>
+{{/each}}
+</div>
+{{else}}
+<div class="alert alert-warning">
+  <p>No bookings found</p>
+</div>
+{{/if}}
+
+</div>
+        </div>  

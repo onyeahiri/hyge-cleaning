@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  {{#if services}}
+  <div class="card col-md-8 mx-auto">
+    <div class="alert alert-info">
+      <h4>Offered Services</h4>
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <th>Service Name</th>
+        <th>Amount</th>
+      </thead>
+      <tbody>
+        {{#each services}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{amount}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  {{else}}
+  <div class="alert alert-info">
+    <p>No Services Found</p>
+  </div>
+  {{/if}}
+</div>

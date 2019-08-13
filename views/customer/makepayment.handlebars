@@ -1,0 +1,44 @@
+<div class="prices">
+<div class="col-md-6 mx-auto">
+  <div class="alert alert-success">
+    <p>
+      Dear username, you are about to make a payment for the following service
+    </p>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">
+        Payment Details
+      </h4>
+    </div>
+
+    <div class="card-body">
+      <table class="table table-striped">
+        <tr>
+          <th>{{service.name}}</th>
+          <td>{{service.amount}}</td>
+        </tr>
+        <tr>
+          <th></th>
+          <td>
+            <form action="/customer/make/payment" method="POST">
+              <!-- hidden field -->
+              <input type="hidden" name="sid" value="{{service.id}}" />
+              
+              <script src="https://checkout.stripe.com/checkout.js" 
+                      data-key="pk_test_SXa7zrO83rRGXQDAkXvL0T2y"
+                      class="stripe-button"
+                      data-description="Payment For Cleaning Service"
+                      data-name="{{service.name}}"
+                      data-currency="ngn"
+                      data-locale="auto"
+                      data-amount="{{service.amount}}"
+                      >
+              </script>
+            </form>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

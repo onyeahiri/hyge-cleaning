@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  {{#if customers}}
+  <div class="card col-md-10 mx-auto">
+    <div class="alert alert-info">
+      <h4>Registered Customers</h4>
+    </div>
+    <table class="table table-striped full-width">
+      <thead>
+        <th>Full Name</th>
+        <th>Email Address</th>
+        <th>Phone Number</th>
+        <th>Address</th>
+      </thead>
+      <tbody>
+        {{#each customers}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{email_address}}</td>
+          <td>{{phone_no}}</td>
+          <td>{{address}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  {{else}}
+  <div class="alert alert-info">
+    <p>No Customer Found</p>
+  </div>
+  {{/if}}
+</div>
