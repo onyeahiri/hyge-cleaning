@@ -7,9 +7,10 @@ const dbString = {
 };
 
 if(process.env.NODE_ENV === "production"){
-  dbString.host = "";
-  dbString.username = "";
-  dbString.password = "";
+  dbString.host = "us-cdbr-iron-east-02.cleardb.net";
+  dbString.username = "b5ba90678a14fc";
+  dbString.password = "d192ee2b";
+  dbString.database = 'heroku_993be6745153f57';
 }else{
   dbString.host = "localhost";
   dbString.username = "root";
