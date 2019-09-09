@@ -84,7 +84,7 @@ app.get('/logout', (req, res)=>{
 
 
 //-- Setup routes
-app.use('/customer', customer);
+app.use('/customer/', customer);
 app.use('/admin', admin);
 
 // favicons
