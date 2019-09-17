@@ -11,7 +11,7 @@ html {
 }
 
 .body {
-  background-image:linear-gradient(rgba(56, 56, 56, 0.616), rgba(0, 0, 0, 0.7)), url("/img/home-cleaning-services-singapore.jpg");
+  background-image: url("/img/home-cleaning-services-singapore.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -166,6 +166,14 @@ text-justify: inter-word;
   float: right;
 }
 
+@media screen and (max-width: 500px){
+  .avatar {
+    position: absolute;
+    left: 0% !important;
+    width: 250px;
+  }
+}
+
 .section-all {
  margin: auto;
  float: inherit; 
@@ -174,7 +182,10 @@ text-justify: inter-word;
 .services-0 {
   margin-top: 50px;
   margin-bottom: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial black', sans-serif;
 }
+  
+
 
 div.background {
   background-image: url("/img/window-cleaning-banner.jpg");
@@ -202,13 +213,13 @@ div.transbox p {
 }
 
 .general_clean li {
-  padding-left: 100px;
+  padding-left: 50px;
   margin-top: 40px;
 }
 
 .general_clean2 {
   margin-top: 60px;
-  padding-left: 30px; 
+  padding-left: -20px; 
 }
 
 .general_clean2 li {
@@ -331,8 +342,15 @@ div.transbox p {
 
 .prices {
   text-align: center;
+  color: red;
+
 }
 
+.prices h3{
+ float: right;
+  color: gray;
+  margin-top: 20px;
+}
 .box a{
   line-height: 100px;
   vertical-align: middle;
